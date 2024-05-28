@@ -4,8 +4,8 @@ import nltk
 import re
 import string
 import nltk
-nltk.download('stopwords')
-nltk.download('punkt')
+# nltk.download('stopwords')
+# nltk.download('punkt')
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem.porter import PorterStemmer
@@ -75,8 +75,7 @@ def text_preprocessing(text):
     text = text.lower()
     text = remove_html(text)
     text = convert_number(text)
-    text = remove_whitespace
-
+    return text
 
 
 
