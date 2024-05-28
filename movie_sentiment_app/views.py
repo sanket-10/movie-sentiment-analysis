@@ -22,7 +22,11 @@ def index(request):
         print(result[0])
         print(result)
         print("model loaded successfully................")
+        if result[0] == 1:
+            review_sentiment = "Positive"
+        else:
+            review_sentiment = "Negative"
 
-        return render(request, "index.html")
+        return render(request, "index.html",context={"result":review_sentiment})
     return render(request, "index.html")
     
